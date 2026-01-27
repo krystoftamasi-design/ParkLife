@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrázek na celou šířku (bez lišty)</title>
+
+    <style>
+        /* Nastavení stránky */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Zakáže posun do stran */
+            
+            /* Povolí scrollování dolů, ale skryje lištu */
+            overflow-y: scroll; /* Vynutí možnost scrollování */
+            scrollbar-width: none; /* Pro Firefox: skryje lištu */
+            -ms-overflow-style: none;  /* Pro IE a Edge */
+        }
+
+        /* Skrytí lišty pro Chrome, Safari, Opera */
+        html::-webkit-scrollbar, body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Nastavení obrázku */
+        .full-width-img {
+            width: 100%;      /* Vždy přes celou šířku okna */
+            height: auto;     /* Výška se dopočítá, aby se obrázek nedeformoval */
+            display: block;   /* Odstraní mezeru pod obrázkem */
+        }
+    </style>
+</head>
+<body>
+
+    <img src="web.png" alt="Dokument" class="full-width-img">
+
+</body>
+</html>
